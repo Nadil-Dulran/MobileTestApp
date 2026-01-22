@@ -1,10 +1,22 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View, Button, Alert } from 'react-native';
 
-function App(): JSX.Element {
+function App() {
 
   return (
-      <Text style={{color: 'red', fontSize: 30, fontWeight: 'bold', textAlign: 'center', marginTop: 200}}>Hello world</Text>
+      <View style={{ alignItems: 'center'}}>
+      <Text style={{color: 'red',
+          fontSize: 30,
+          fontWeight: 'bold',
+          textAlign: 'center',
+          marginTop: 200
+          }}>
+      Hello world</Text>
+      <Text style={{fontSize: 25,
+          color: 'blue'}}>
+      React Native</Text>
+    <Button title="Click Me" onPress={() => Alert.alert('Button Clicked')}/>
+      </View>
   );
 
 }
