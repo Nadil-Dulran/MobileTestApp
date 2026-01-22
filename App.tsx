@@ -13,7 +13,9 @@ function App() {
           }}>
       Hello world</Text>
       <Text style={{fontSize: 25,
-          color: 'blue'}}>
+          color: 'blue',
+          marginBottom: 15
+          }}>Welcome to
       React Native</Text>
     <Button title="Click Me" onPress={() => Alert.alert('Button Clicked')}/>
       </View>
