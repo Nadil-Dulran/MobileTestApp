@@ -11,7 +11,13 @@ function App() {
       </View>
   );
 
-function CustomText(props:any) {
+ type CustomTextProps = {
+    fsize: number;
+    a: string;
+    b: string;
+  }; 
+
+function CustomText(props: CustomTextProps) {
   return (
     <Text style={{ fontSize: props.fsize, color: 'green', fontWeight: '600' }}>
       {props.a} {props.b}
