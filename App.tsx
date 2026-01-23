@@ -1,14 +1,23 @@
 import React from 'react';
-import { Text, View, Button, Alert } from 'react-native';
-import MyComponent from './src/components/MyComponent';
+import { Text, View } from 'react-native';
+import CustomLable from './src/components/CustomLable';
 
 function App() {
 
   return (
       <View style={{ alignItems: 'center'}}>
-      <MyComponent />
+        <CustomLable>Welcome !</CustomLable>
+        <CustomText fsize={25} a={'Hello'} b={'World'}/>
       </View>
   );
+
+function CustomText(props:any) {
+  return (
+    <Text style={{ fontSize: props.fsize, color: 'green', fontWeight: '600' }}>
+      {props.a} {props.b}
+    </Text>
+  );
+}
 
 }
 export default App;
