@@ -11,6 +11,8 @@ function App() {
 
   }
 
+  click()
+
 
   return (
       <View style={{ alignItems: 'center'}}>
