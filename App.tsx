@@ -4,7 +4,12 @@ import CustomLable from './src/components/CustomLable';
 
 function App() {
 
-  console.log('App Rendered');
+  console.log('App ');
+
+  function click(){
+      console.log('Rendered');
+
+  }
 
 
   return (
