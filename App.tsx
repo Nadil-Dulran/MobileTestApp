@@ -11,14 +11,13 @@ function App() {
 
   }
 
-  click()
 
 
   return (
       <View style={{ alignItems: 'center'}}>
         <CustomLable>Welcome !</CustomLable>
         <CustomText fsize={25} a={'Hello'} b={'World'}/>
-        <Button title='Click me' />
+        <Button title='Click me' onPress={click} />
       </View>
   );
 
