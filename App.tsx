@@ -22,10 +22,13 @@ function App() {
         placeholder='User Name'
         placeholderTextColor={'white'}/>
 
-         <TextInput style={{ height: 40, borderColor: 'black', color: 'blue', borderWidth: 2, width: 200, marginTop: 20, marginBottom: 20, borderRadius: 10, backgroundColor: 'gray', paddingLeft: 10 }}
+         <TextInput style={{ height: 40, borderColor: 'black', color: 'blue', borderWidth: 2, width: 200, marginTop: 5, marginBottom: 20, borderRadius: 10, backgroundColor: 'gray', paddingLeft: 10 }}
         
         placeholder='Password'
-        placeholderTextColor={'white'}/>
+        placeholderTextColor={'white'}
+        
+        secureTextEntry={true}
+        />
 
         <Button title='Click me' onPress={() => {
           click(10,5);
