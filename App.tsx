@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Button, Text, TextInput, View } from 'react-native';
 import CustomLable from './src/components/CustomLable';
 
@@ -11,7 +11,11 @@ function App() {
       console.log("x * y  :" + (x*y));
   }
 
+  const [count, setCount] = useState(0);
 
+  function changeCount(){
+    setCount(count + 1);
+  }
 
   return (
       <View style={{ alignItems: 'center'}}>
@@ -31,11 +35,19 @@ function App() {
         />
 
         <Button title='Click me' onPress={() => {
-          click(10,5);
+          changeCount();
         }} />
 
-        <Component1/>
-        <Component2/>
+        <Component1 style={{marginBottom: 20, marginTop: 20}}/>
+        <Component2 style={{marginBottom: 20}}/>
+ 
+        <Text style={{ fontSize: 20, color: 'red', fontWeight: '700', marginTop: 20 }}>
+          Count Value: {count}
+        </Text>
+        <Button title='Change Count' onPress={changeCount}
+         />
+
+        
       </View>
   );
 
@@ -55,21 +67,21 @@ function CustomText(props: CustomTextProps) {
 
 }
 
-function Component1(){
+function Component1(props: { style: object }){
 
   console.log(' Component 1 Rendered ');
   return (
-    <View>
+    <View style={props.style}>
       <Text>Component 1</Text>
     </View>
   );
 }
 
-function Component2(){
+function Component2(props: { style: object }){
 
   console.log(' Component 2 Rendered ');
   return (
-    <View>
+    <View style={props.style}>
       <Text>Component 2</Text>
     </View>
   );
