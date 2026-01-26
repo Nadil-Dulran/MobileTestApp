@@ -4,7 +4,7 @@ import CustomLable from './src/components/CustomLable';
 
 function App() {
 
-  console.log(' Hello ');
+  console.log(' App component Rendered ');
 
   function click(x: number, y:number) {
       console.log("Additiom :" + (x+y));   // Print the passed value to the console
@@ -33,6 +33,9 @@ function App() {
         <Button title='Click me' onPress={() => {
           click(10,5);
         }} />
+
+        <Component1/>
+        <Component2/>
       </View>
   );
 
@@ -51,4 +54,25 @@ function CustomText(props: CustomTextProps) {
 }
 
 }
+
+function Component1(){
+
+  console.log(' Component 1 Rendered ');
+  return (
+    <View>
+      <Text>Component 1</Text>
+    </View>
+  );
+}
+
+function Component2(){
+
+  console.log(' Component 2 Rendered ');
+  return (
+    <View>
+      <Text>Component 2</Text>
+    </View>
+  );
+}
+
 export default App;
