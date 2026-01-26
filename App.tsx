@@ -4,11 +4,11 @@ import CustomLable from './src/components/CustomLable';
 
 function App() {
 
-  console.log('App ');
+  console.log(' Hello ');
 
-  function click(){
-      console.log('Rendered');
-
+  function click(x: number, y:number) {
+      console.log("Additiom :" + (x+y));   // Print the passed value to the console
+      console.log("x * y  :" + (x*y));
   }
 
 
@@ -17,7 +17,9 @@ function App() {
       <View style={{ alignItems: 'center'}}>
         <CustomLable>Welcome !</CustomLable>
         <CustomText fsize={25} a={'Hello'} b={'World'}/>
-        <Button title='Click me' onPress={click} />
+        <Button title='Click me' onPress={() => {
+          click(10,5);
+        }} />
       </View>
   );
 
