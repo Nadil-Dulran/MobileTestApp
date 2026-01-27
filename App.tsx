@@ -21,9 +21,15 @@ function App() {
 
   var x = 0; // Regular variable not a state variable(will not cause re-render)
 
+  const [y, setY] = useState(0); // State variable (will cause re-render)
+
   function changeX(){
     x = x + 1;
     console.log(' X Value : ' + x);
+  }
+
+  function changeY(){
+    setY(y + 1);
   }
 
   return (
@@ -47,6 +53,13 @@ function App() {
 
         <Component1 style={{marginBottom: 20, marginTop: 20}}/>
         <Component2 style={{marginBottom: 20}}/>
+
+        <Text style={{ fontSize: 20, color: 'blue', fontWeight: '700', marginTop: 20 }}>
+          Y Value: {y}
+        </Text>
+
+        <Button title='Increment Y' onPress={changeY} />
+        
  
         <Text style={{ fontSize: 20, color: 'red', fontWeight: '700', marginTop: 20 }}>
           Count Value: {count}
