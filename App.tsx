@@ -32,7 +32,9 @@ function App() {
     setY(y + 1);
   }
 
-  var textValue = '';
+  //var textValue = '';
+
+  const [textValue, setTextValue] = useState(''); // State variable to hold TextInput value
 
   function displayValue(){
     console.log(' Text Input Value : ' + textValue);
@@ -40,7 +42,7 @@ function App() {
   }
 
   function onTextChange(v: string){
-    textValue = v;
+    setTextValue(v);
 
   }
 
