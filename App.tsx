@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Button, Text, TextInput, View } from 'react-native';
+import { Alert, Button, Text, TextInput, View } from 'react-native';
 import CustomLable from './src/components/CustomLable';
 
 function App() {
@@ -32,6 +32,18 @@ function App() {
     setY(y + 1);
   }
 
+  var textValue = '';
+
+  function displayValue(){
+    console.log(' Text Input Value : ' + textValue);
+    Alert.alert('Input Value', textValue);
+  }
+
+  function onTextChange(v: string){
+    textValue = v;
+
+  }
+
   return (
       <View style={{ alignItems: 'center'}}>
         <CustomLable>Welcome !</CustomLable>
@@ -39,20 +51,26 @@ function App() {
         <TextInput style={{ height: 40, borderColor: 'black', color: 'blue', borderWidth: 2, width: 200, marginTop: 20, marginBottom: 20, borderRadius: 10, backgroundColor: 'gray', paddingLeft: 10 }}
         
         placeholder='User Name'
-        placeholderTextColor={'white'}/>
+        placeholderTextColor={'white'}
+        onChangeText={onTextChange}
+        />
 
-         <TextInput style={{ height: 40, borderColor: 'black', color: 'blue', borderWidth: 2, width: 200, marginTop: 5, marginBottom: 20, borderRadius: 10, backgroundColor: 'gray', paddingLeft: 10 }}
+         {/* <TextInput style={{ height: 40, borderColor: 'black', color: 'blue', borderWidth: 2, width: 200, marginTop: 5, marginBottom: 20, borderRadius: 10, backgroundColor: 'gray', paddingLeft: 10 }}
         
         placeholder='Password'
         placeholderTextColor={'white'}
         
         secureTextEntry={true}
-        />
+        /> */}
+
+        <Button title='Submit' onPress={displayValue} />
+
+        <Component1 style={{marginBottom: 20, marginTop: 20}}/>
 
         <Button title='Increment X' onPress={changeX} />
 
-        <Component1 style={{marginBottom: 20, marginTop: 20}}/>
-        <Component2 style={{marginBottom: 20}}/>
+       
+        <Component2 style={{marginBottom: 20, marginTop: 20}}/>
 
         <Text style={{ fontSize: 20, color: 'blue', fontWeight: '700', marginTop: 20 }}>
           Y Value: {y}
