@@ -17,6 +17,15 @@ function App() {
     setCount(count + 1);
   }
 
+  // Normal variables - Var, Let, Const
+
+  var x = 0; // Regular variable not a state variable(will not cause re-render)
+
+  function changeX(){
+    x = x + 1;
+    console.log(' X Value : ' + x);
+  }
+
   return (
       <View style={{ alignItems: 'center'}}>
         <CustomLable>Welcome !</CustomLable>
@@ -34,9 +43,7 @@ function App() {
         secureTextEntry={true}
         />
 
-        <Button title='Click me' onPress={() => {
-          changeCount();
-        }} />
+        <Button title='Increment X' onPress={changeX} />
 
         <Component1 style={{marginBottom: 20, marginTop: 20}}/>
         <Component2 style={{marginBottom: 20}}/>
