@@ -55,6 +55,10 @@ function App() {
 
   }
 
+  function makesStudentStudy(){
+    Student.study();
+  }
+
   
 
   return (
@@ -86,7 +90,7 @@ function App() {
         <Component2 style={{marginBottom: 20, marginTop: 20}} {...Student}/>
 
 
-        
+        <Button title='Study' onPress={makesStudentStudy} />
 
         <Text style={{ fontSize: 20, color: 'blue', fontWeight: '700', marginTop: 20 }}>
           Y Value: {y}
