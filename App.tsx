@@ -13,6 +13,56 @@ function App() {
     }
   };
 
+  class Calculator{
+    number1: number = 0;
+    number2: number = 0;
+
+    constructor(n1: number, n2: number){
+      this.number1 = n1;
+      this.number2 = n2;
+    }
+
+    add(){
+      return this.number1 + this.number2;
+    }
+
+    sub(){
+      return this.number1 - this.number2;
+    }
+
+    multiply(){
+      return this.number1 * this.number2;
+    }
+  }
+
+  // var cal = {
+  //   number1:0,
+  //   number2:0,
+  //   add: function() {
+  //     return this.number1 + this.number2;
+  //   },
+  //   sub: function() {
+  //     return this.number1 - this.number2;
+  //   },
+  //   multiply: function() {
+  //     return this.number1 * this.number2;
+  //   }
+  // };
+
+  function addNumber(){
+    var cal = new Calculator(7,7);
+    // cal.number1 = 10;
+    // cal.number2 = 20;
+    var result = cal.add();
+    Alert.alert('Addition Result', 'The addition of ' + cal.number1 + ' and ' + cal.number2 + ' is: ' + result);
+    
+    var cal1 = new Calculator(10,20);
+    // cal1.number1 = 10;
+    // cal1.number2 = 20;
+    var result1 = cal1.add();
+    Alert.alert('Addition Result', 'The addition of ' + cal1.number1 + ' and ' + cal1.number2 + ' is: ' + result1);
+  }
+
   console.log(' App component Rendered ');
 
   function click(x: number, y:number) {
@@ -90,7 +140,7 @@ function App() {
         <Component2 style={{marginBottom: 20, marginTop: 20}} {...Student}/>
 
 
-        <Button title='Study' onPress={makesStudentStudy} />
+        <Button title='Addition' onPress={addNumber} />
 
         <Text style={{ fontSize: 20, color: 'blue', fontWeight: '700', marginTop: 20 }}>
           Y Value: {y}
