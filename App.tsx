@@ -4,6 +4,15 @@ import CustomLable from './src/components/CustomLable';
 
 function App() {
 
+  var Student = {
+    Name: 'John Doe',
+    Age: 21,
+    Course: 'Computer Science',
+    study: function() {
+      console.log(this.Name + ' is studying ' + this.Course);
+    }
+  };
+
   console.log(' App component Rendered ');
 
   function click(x: number, y:number) {
@@ -46,6 +55,8 @@ function App() {
 
   }
 
+  
+
   return (
       <View style={{ alignItems: 'center'}}>
         <CustomLable>Welcome !</CustomLable>
@@ -72,7 +83,10 @@ function App() {
         <Button title='Increment X' onPress={changeX} />
 
        
-        <Component2 style={{marginBottom: 20, marginTop: 20}}/>
+        <Component2 style={{marginBottom: 20, marginTop: 20}} {...Student}/>
+
+
+        
 
         <Text style={{ fontSize: 20, color: 'blue', fontWeight: '700', marginTop: 20 }}>
           Y Value: {y}
@@ -117,12 +131,13 @@ function Component1(props: { style: object }){
   );
 }
 
-function Component2(props: { style: object }){
+function Component2(props: { style: object, Name: string, Age: number, Course: string, study: () => void }){
 
   console.log(' Component 2 Rendered ');
   return (
     <View style={props.style}>
-      <Text>Component 2</Text>
+      <Text>{props.Name} is {props.Age} years old and studying {props.Course}.</Text> 
+      {/* Displaying object properties */}
     </View>
   );
 }
