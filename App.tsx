@@ -4,7 +4,14 @@ import CustomLable from './src/components/CustomLable';
 
 function App() {
 
-  var Student = {
+  interface Student{       // 1.) Interface to define Student structure
+    Name: string;
+    Age: number;
+    Course: string;
+    study: () => void;
+  }
+
+  var Student_1 : Student = {         // 1.) Object to hold Student data
     Name: 'John Doe',
     Age: 21,
     Course: 'Computer Science',
@@ -12,6 +19,12 @@ function App() {
       console.log(this.Name + ' is studying ' + this.Course);
     }
   };
+
+  function printData(std: Student) {        // 2.) Function to print Student data
+    console.log(' Student Name: ' + std.Name);
+    console.log(' Student Age: ' + std.Age);
+    console.log(' Student Course: ' + std.Course);
+  }
 
   class Calculator{
     number1: number = 0;
@@ -106,7 +119,7 @@ function App() {
   }
 
   function makesStudentStudy(){
-    Student.study();
+    Student_1.study();
   }
 
   
@@ -137,7 +150,7 @@ function App() {
         <Button title='Increment X' onPress={changeX} />
 
        
-        <Component2 style={{marginBottom: 20, marginTop: 20}} {...Student}/>
+        <Component2 style={{marginBottom: 20, marginTop: 20}} {...Student_1}/>
 
 
         <Button title='Addition' onPress={addNumber} />
@@ -152,12 +165,14 @@ function App() {
         <Text style={{ fontSize: 20, color: 'red', fontWeight: '700', marginTop: 20 }}>
           Count Value: {count}
         </Text>
-        <Button title='Change Count' onPress={changeCount}
-         />
+        <Button title='Change Count' onPress={changeCount} />
 
+        <Component3 style={{marginBottom: 20, marginTop: 20}}/>
+
+        <Button title='Show Student Info' onPress={() => printData(Student_1)} />  
         
       </View>
-  );
+  );    // 3.) Button to print Student data
 
  type CustomTextProps = {
     fsize: number;
@@ -192,6 +207,16 @@ function Component2(props: { style: object, Name: string, Age: number, Course: s
     <View style={props.style}>
       <Text>{props.Name} is {props.Age} years old and studying {props.Course}.</Text> 
       {/* Displaying object properties */}
+    </View>
+  );
+}
+
+function Component3(props: { style: object }){
+
+  console.log(' Component 3 Rendered ');
+  return (
+    <View style={props.style}>
+      <Text>Component 3</Text>
     </View>
   );
 }
