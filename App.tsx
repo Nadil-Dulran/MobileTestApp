@@ -125,7 +125,7 @@ function App() {
   
 
   return (
-      <View style={{ alignItems: 'center'}}>
+      <View style={{ alignItems: 'center', backgroundColor: 'white', flex: 1, justifyContent: 'center' }}>
         <CustomLable>Welcome !</CustomLable>
         <CustomText fsize={25} a={'Hello'} b={'World'}/>
         <TextInput style={{ height: 40, borderColor: 'black', color: 'blue', borderWidth: 2, width: 200, marginTop: 20, marginBottom: 20, borderRadius: 10, backgroundColor: 'gray', paddingLeft: 10 }}
