@@ -125,7 +125,7 @@ function App() {
   
 
   return (
-      <View style={{ alignItems: 'center', backgroundColor: 'white', flex: 1, justifyContent: 'center' }}>
+      <View style={{ alignItems: 'center', justifyContent: 'center', backgroundColor: 'white' }}>
         <CustomLable>Welcome !</CustomLable>
         <CustomText fsize={25} a={'Hello'} b={'World'}/>
         <TextInput style={{ height: 40, borderColor: 'black', color: 'blue', borderWidth: 2, width: 200, marginTop: 20, marginBottom: 20, borderRadius: 10, backgroundColor: 'gray', paddingLeft: 10 }}
@@ -170,6 +170,17 @@ function App() {
         <Component3 style={{marginBottom: 20, marginTop: 20}}/>
 
         <Button title='Show Student Info' onPress={() => printData(Student_1)} />  
+
+        <Component3 style={{marginBottom: 20, marginTop: 20}}/>
+
+
+          <View style={{ backgroundColor: 'blue', flexDirection: 'row', height: 230, width: 370 }}>
+            <View style={{ backgroundColor: 'red', margin: 10, flex: 1 }}>
+              <View style={{ backgroundColor: 'yellow' }}>
+                <Text>Nested Views</Text>
+              </View>
+            </View>
+          </View>
         
       </View>
   );    // 3.) Button to print Student data
