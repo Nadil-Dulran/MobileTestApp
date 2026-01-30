@@ -182,10 +182,10 @@ function App() {
 
         <Button title='Show Student Info' onPress={() => printData(Student_1)} />  
 
-          <View style={{ backgroundColor: 'blue', flexDirection: 'row', height: 230, width: 370, alignSelf: 'center', marginTop: 20 }}>
-            <View style={{ backgroundColor: 'red',flex: 1, height: 150, width: 100, elevation:15 }}>
-              <View style={{ backgroundColor: 'yellow', elevation:10 }}>
-                <Text>Nested Views</Text>
+          <View style={{ backgroundColor: 'blue', flexDirection: 'row', height: 230, width: 370, alignSelf: 'center', marginTop: 20, borderRadius: 20 }}>
+            <View style={{ backgroundColor: 'red',flex: 1, height: 150, width: 100, elevation:15, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}>
+              <View style={{ backgroundColor: 'yellow', elevation:10, height: 100, width: 80, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}>
+                <Text style={{ fontWeight: '800', textAlign: 'center' }}>Nested Views</Text>
               </View>
             </View>
           </View>
