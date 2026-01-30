@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Alert, Button, Text, TextInput, View } from 'react-native';
 import CustomLable from './src/components/CustomLable';
+import { StyleSheet } from 'react-native';
 
 function App() {
 
@@ -124,8 +125,18 @@ function App() {
 
   
 
+  //Used Object with attributes alignItems to center the content horizontally & justifyContent to center vertically
+ const sty = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }
+  })
+
   return (
-      <View style={{ alignItems: 'center', justifyContent: 'center', backgroundColor: 'white' }}>
+      <View style={sty.container}>
         <CustomLable>Welcome !</CustomLable>
         <CustomText fsize={25} a={'Hello'} b={'World'}/>
         <TextInput style={{ height: 40, borderColor: 'black', color: 'blue', borderWidth: 2, width: 200, marginTop: 20, marginBottom: 20, borderRadius: 10, backgroundColor: 'gray', paddingLeft: 10 }}
@@ -171,9 +182,6 @@ function App() {
 
         <Button title='Show Student Info' onPress={() => printData(Student_1)} />  
 
-        <Component3 style={{marginBottom: 20, marginTop: 20}}/>
-
-
           <View style={{ backgroundColor: 'blue', flexDirection: 'row', height: 230, width: 370, alignSelf: 'flex-end', marginTop: 20 }}>
             <View style={{ backgroundColor: 'red',flex: 1, height: 250, width: 400 }}>
               <View style={{ backgroundColor: 'yellow' }}>
@@ -184,8 +192,6 @@ function App() {
         
       </View>
   );    // 3.) Button to print Student data
-
-  //Used alignItems to center the content horizontally & justifyContent to center vertically
 
  type CustomTextProps = {
     fsize: number;
