@@ -174,7 +174,7 @@ function App() {
         <Component3 style={{marginBottom: 20, marginTop: 20}}/>
 
 
-          <View style={{ backgroundColor: 'blue', flexDirection: 'row', height: 230, width: 370, alignSelf: 'center', marginTop: 20 }}>
+          <View style={{ backgroundColor: 'blue', flexDirection: 'row', height: 230, width: 370, alignSelf: 'flex-end', marginTop: 20 }}>
             <View style={{ backgroundColor: 'red',flex: 1, height: 250, width: 400 }}>
               <View style={{ backgroundColor: 'yellow' }}>
                 <Text>Nested Views</Text>
@@ -184,6 +184,8 @@ function App() {
         
       </View>
   );    // 3.) Button to print Student data
+
+  //Used alignItems to center the content horizontally & justifyContent to center vertically
 
  type CustomTextProps = {
     fsize: number;
