@@ -174,8 +174,8 @@ function App() {
         <Component3 style={{marginBottom: 20, marginTop: 20}}/>
 
 
-          <View style={{ backgroundColor: 'blue', flexDirection: 'row', height: 230, width: 370 }}>
-            <View style={{ backgroundColor: 'red', margin: 10, flex: 1 }}>
+          <View style={{ backgroundColor: 'blue', flexDirection: 'row', height: 230, width: 370, alignSelf: 'center', marginTop: 20 }}>
+            <View style={{ backgroundColor: 'red',flex: 1, height: 250, width: 400 }}>
               <View style={{ backgroundColor: 'yellow' }}>
                 <Text>Nested Views</Text>
               </View>
