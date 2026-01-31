@@ -38,3 +38,57 @@ This project demonstrates various React Native and TypeScript concepts implement
 - **Object Literals**: Created and manipulated objects with properties and methods
 - **Functions**: Defined various function types (regular functions, arrow functions, methods)
 - **Console Logging**: Used console logs for debugging and tracking component renders
+
+## How to Run the Project
+
+> **Note**: Make sure you have completed the [React Native Environment Setup](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+
+### Step 1: Install Dependencies
+
+First, install all required dependencies:
+
+```sh
+# Using npm
+npm install
+
+# OR using Yarn
+yarn install
+```
+
+### Step 2: Install iOS Dependencies (iOS only)
+
+For iOS, install CocoaPods dependencies:
+
+```sh
+# Install Ruby bundler (first time only)
+bundle install
+
+# Install CocoaPods
+bundle exec pod install
+```
+
+### Step 3: Start Metro Bundler
+
+First, you will need to run **Metro**, the JavaScript bundler for React Native:
+
+```sh
+# Using npm
+npm start
+
+# OR using Yarn
+yarn start
+```
+
+### Step 4: Build and Run Your App
+
+With Metro running, open a **new terminal window/pane** and use one of the following commands:
+
+#### For Android
+
+```sh
+# Using npm
+npm run android
+
+# OR using Yarn
+yarn android
+```
