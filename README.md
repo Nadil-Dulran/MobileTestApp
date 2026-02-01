@@ -167,3 +167,24 @@ When you want to forcefully reload, for example to reset the state of your app, 
 - **Build failed in Xcode**
   - Clean build folder: In Xcode, go to Product → Clean Build Folder
   - Delete derived data: `rm -rf ~/Library/Developer/Xcode/DerivedData`
+
+#### General Issues
+- **Module not found errors**
+  ```sh
+  # Clear node_modules and reinstall
+  rm -rf node_modules
+  npm install
+  # or
+  yarn install
+  ```
+
+- **Cache issues**
+  ```sh
+  # Reset Metro cache
+  npm start -- --reset-cache
+  
+  # Clear watchman (if installed)
+  watchman watch-del-all
+  ```
+
+For more troubleshooting help, visit the [React Native Troubleshooting Guide](https://reactnative.dev/docs/troubleshooting).
