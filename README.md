@@ -133,3 +133,24 @@ When you want to forcefully reload, for example to reset the state of your app, 
 
 - **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
 - **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+
+## Troubleshooting
+
+### Common Issues
+
+#### Metro Bundler Issues
+- **Error: Port already in use**
+  ```sh
+  # Kill the process using port 8081
+  npx react-native start --reset-cache
+  ```
+
+#### Android Build Issues
+- **Gradle build failed**
+  - Clean the build: `cd android && ./gradlew clean && cd ..`
+  - Check that you have the correct Android SDK installed
+  - Verify `local.properties` has the correct SDK path
+
+- **Unable to load script**
+  - Make sure Metro is running
+  - Try resetting cache: `npm start -- --reset-cache`
