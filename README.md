@@ -154,3 +154,16 @@ When you want to forcefully reload, for example to reset the state of your app, 
 - **Unable to load script**
   - Make sure Metro is running
   - Try resetting cache: `npm start -- --reset-cache`
+
+#### iOS Build Issues
+- **Pod install failed**
+  ```sh
+  cd ios
+  bundle exec pod deintegrate
+  bundle exec pod install
+  cd ..
+  ```
+
+- **Build failed in Xcode**
+  - Clean build folder: In Xcode, go to Product → Clean Build Folder
+  - Delete derived data: `rm -rf ~/Library/Developer/Xcode/DerivedData`
